@@ -1,16 +1,26 @@
+#include "rvcc.h"
 #include <stdio.h>
-#include <stdlib.h>
 
-int main(int argc, char **argv) {
-  if(argc != 2) {
-    fprintf(stderr, "%s: invalid number of arguments\n", argv[0]);
-    return 1;
+extern char *CurrentInput;
+extern int Depth;
+
+//expr = mul ("+" mul | "-" mul) *
+//mul = primary("*" primary | "/" primary)
+//primary = "(" expr ")" | num
+//AST越往下优先级越高
+//static Node *expr
+
+
+int main(int Argc, char **Argv) {
+  if(Argc != 2) {
+    error("%s: invalid number of arguments", Argv[0]);
   }
+  
+  Token *Tok = tokenize(Argv[1]);
 
-  printf(".global main\n");
-  printf("main:\n");
-  printf("  li a0, %d\n", atoi(argv[1]));
-  printf("  ret\n");
+  Node *Nd = parse(Tok);
+
+  codegen(Nd);
 
   return 0;
 }

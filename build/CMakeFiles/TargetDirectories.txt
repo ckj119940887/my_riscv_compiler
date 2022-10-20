@@ -1,0 +1,3 @@
+/home/ckj/git_dir/my_riscv_compiler/build/CMakeFiles/rebuild_cache.dir
+/home/ckj/git_dir/my_riscv_compiler/build/CMakeFiles/edit_cache.dir
+/home/ckj/git_dir/my_riscv_compiler/build/CMakeFiles/rvcc.dir

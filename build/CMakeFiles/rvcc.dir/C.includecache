@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ckj/git_dir/my_riscv_compiler/parse.c
+rvcc.h
+/home/ckj/git_dir/my_riscv_compiler/rvcc.h
+
+/home/ckj/git_dir/my_riscv_compiler/rvcc.h
+stdarg.h
+-
+stdio.h
+-
+stdlib.h
+-
+ctype.h
+-
+stdbool.h
+-
+stdint.h
+-
+string.h
+-
+assert.h
+-
+
